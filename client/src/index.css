@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+
+  /* TradeZilla specific colors */
+  --dark-bg: hsl(218, 23%, 8%);
+  --dark-card: hsl(218, 23%, 13%);
+  --dark-border: hsl(218, 20%, 18%);
+  --profit-green: hsl(165, 100%, 42%);
+  --loss-red: hsl(348, 89%, 64%);
+  --warning-yellow: hsl(42, 100%, 70%);
+  --info-blue: hsl(207, 90%, 54%);
+  --text-primary: hsl(218, 11%, 94%);
+  --text-muted: hsl(218, 11%, 58%);
+}
+
+.dark {
+  --background: hsl(218, 23%, 8%);
+  --foreground: hsl(218, 11%, 94%);
+  --muted: hsl(218, 23%, 13%);
+  --muted-foreground: hsl(218, 11%, 58%);
+  --popover: hsl(218, 23%, 13%);
+  --popover-foreground: hsl(218, 11%, 94%);
+  --card: hsl(218, 23%, 13%);
+  --card-foreground: hsl(218, 11%, 94%);
+  --border: hsl(218, 20%, 18%);
+  --input: hsl(218, 20%, 18%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(218, 20%, 18%);
+  --secondary-foreground: hsl(218, 11%, 94%);
+  --accent: hsl(218, 20%, 18%);
+  --accent-foreground: hsl(218, 11%, 94%);
+  --destructive: hsl(348, 89%, 64%);
+  --destructive-foreground: hsl(218, 11%, 94%);
+  --ring: hsl(218, 11%, 58%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    @apply dark;
+  }
+}
+
+@layer utilities {
+  .profit-green {
+    color: hsl(165, 100%, 42%);
+  }
+  
+  .loss-red {
+    color: hsl(348, 89%, 64%);
+  }
+  
+  .bg-dark-bg {
+    background-color: hsl(218, 23%, 8%);
+  }
+  
+  .bg-dark-card {
+    background-color: hsl(218, 23%, 13%);
+  }
+  
+  .border-dark-border {
+    border-color: hsl(218, 20%, 18%);
+  }
+  
+  .text-text-primary {
+    color: hsl(218, 11%, 94%);
+  }
+  
+  .text-text-muted {
+    color: hsl(218, 11%, 58%);
+  }
+
+  .bg-profit-green\/10 {
+    background-color: hsl(165, 100%, 42%, 0.1);
+  }
+
+  .bg-loss-red\/10 {
+    background-color: hsl(348, 89%, 64%, 0.1);
+  }
+
+  .bg-info-blue\/10 {
+    background-color: hsl(207, 90%, 54%, 0.1);
+  }
+
+  .bg-warning-yellow\/10 {
+    background-color: hsl(42, 100%, 70%, 0.1);
+  }
+
+  .text-profit-green {
+    color: hsl(165, 100%, 42%);
+  }
+
+  .text-loss-red {
+    color: hsl(348, 89%, 64%);
+  }
+
+  .text-info-blue {
+    color: hsl(207, 90%, 54%);
+  }
+
+  .text-warning-yellow {
+    color: hsl(42, 100%, 70%);
+  }
+
+  .border-info-blue\/20 {
+    border-color: hsl(207, 90%, 54%, 0.2);
+  }
+}
